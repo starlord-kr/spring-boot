@@ -14,8 +14,8 @@ public class SpringRedisConfig {
     private String redisHost;
     @Value("${spring.redis.port}")
     private Integer redisPort;
-    @Value("${joochang.test.key}")
-    private String joochangTestKey;
+//    @Value("${joochang.test.key}")
+//    private String joochangTestKey;
 
     @Bean
     public JedisConnectionFactory connectionFactory() {

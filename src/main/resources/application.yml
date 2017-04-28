@@ -6,11 +6,28 @@ spring:
     name: My Lotto Test
   profiles.active: local
   profiles:
-    include: database.yml
+#    include: database.yml
 
 ---
 spring:
   profiles: local
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&useSSL=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useAffectedRows=true
+    username: mytest
+    password: mysql123!
+    tomcat:
+      initial-size: 1
+      min-idle: 1
+      # Maximum number of active connections that can be allocated from this pool at the same time.
+      max-active: 4
+      max-idle: 4
+      # Number of ms to wait before throwing an exception if no connection is available.
+      max-wait: 3000
+      validation-query: SELECT 1
+      # Validate the connection before borrowing it from the pool.
+      test-on-borrow: true
 
   redis:
       host: localhost
