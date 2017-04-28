@@ -2,8 +2,7 @@
 # spring.profiles.active=@activeProfile@
 
 spring:
-  profiles:
-    active: local
+  profiles.active: local
 
   jpa:
     database: MYSQL
@@ -11,9 +10,6 @@ spring:
 
 ---
 spring:
-  application:
-    name: My Lotto Test
-
   profiles: local
 
   datasource:
@@ -86,5 +82,3 @@ spring:
       max-wait: 3000
       validation-query: SELECT 1
       test-on-borrow: true
-
-___

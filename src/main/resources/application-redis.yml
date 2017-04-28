@@ -1,0 +1,39 @@
+# active profile
+# spring.profiles.active=@activeProfile@
+
+spring:
+  profiles.active: local
+
+---
+spring:
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+---
+
+spring:
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+---
+
+spring:
+  profiles: qa
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+---
+
+spring:
+  profiles: release
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+
+# JSP 용 ViewResolver설정
+# spring.view.prefix:/WEB-INF/view/
+# spring.view.suffix:.jsp
