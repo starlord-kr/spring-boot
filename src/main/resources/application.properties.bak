@@ -8,14 +8,17 @@
 
 # DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-spring.datasource.url=jdbc:mysql://localhost:3306/
-spring.datasource.connectionProperties=useSSL=false;characterEncoding=UTF-8;zeroDateTimeBehavior=convertToNull;useAffectedRows=true
+spring.datasource.url=jdbc:mysql://localhost:3306/?characterEncoding=UTF-8&useSSL=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useAffectedRows=true
+# spring.datasource.connectionProperties=autoReconnect=true;useSSL=true;characterEncoding=UTF-8;zeroDateTimeBehavior=convertToNull;useAffectedRows=true
 spring.datasource.username=mytest
 spring.datasource.password=mysql123!
 spring.datasource.initSQL=SELECT 1
 # Number of ms to wait before throwing an exception if no connection is available.
 spring.datasource.tomcat.max-wait=3000
 # Maximum number of active connections that can be allocated from this pool at the same time.
+spring.datasource.tomcat.initial-size=1
+spring.datasource.tomcat.min-idle=1
+spring.datasource.tomcat.max-idle=4
 spring.datasource.tomcat.max-active=4
 # Validate the connection before borrowing it from the pool.
 spring.datasource.tomcat.test-on-borrow=true
@@ -32,3 +35,8 @@ spring.datasource.tomcat.test-on-borrow=true
 # active profile
 # spring.profiles.active=@activeProfile@
 
+# Redis 설정
+spring.redis.host=localhost
+spring.redis.port=6379
+spring.redis.timeout=3000
+joochang.test.key=localhost:joochang:test:key

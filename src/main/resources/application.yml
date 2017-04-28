@@ -1,0 +1,62 @@
+# active profile
+# spring.profiles.active=@activeProfile@
+
+spring:
+  application:
+    name: My Lotto Test
+  profiles.active: local
+  profiles:
+    include: database.yml
+
+---
+spring:
+  profiles: local
+
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+
+server:
+  port: 8080
+---
+
+spring:
+  profiles: dev
+
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+
+server:
+  port: 80
+---
+
+spring:
+  profiles: qa
+
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+
+server:
+  port: 80
+---
+
+spring:
+  profiles: release
+
+  redis:
+      host: localhost
+      port: 6379
+      timeout: 3000
+
+server:
+  port: 80
+---
+
+# JSP 용 ViewResolver설정
+# spring.view.prefix:/WEB-INF/view/
+# spring.view.suffix:.jsp
