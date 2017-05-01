@@ -2,39 +2,35 @@
 # spring.profiles.active=@activeProfile@
 
 spring:
-  application:
-    name: My Lotto Test
   profiles.active: local
-  profiles:
-    include: 'datasource,redis,personnel'
 
 ---
 spring:
   profiles: local
 
-server:
-  port: 8080
+person.name: This is local
+
 ---
 
 spring:
   profiles: dev
 
-server:
-  port: 80
+person.name: This is dev
+
 ---
 
 spring:
   profiles: qa
 
-server:
-  port: 80
+person.name: This is qa
+
 ---
 
 spring:
   profiles: release
 
-server:
-  port: 80
+person.name: This is release
+
 
 # JSP 용 ViewResolver설정
 # spring.view.prefix:/WEB-INF/view/
