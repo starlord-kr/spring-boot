@@ -7,11 +7,14 @@ import org.springframework.stereotype.Component;
  * You can use prefix-alias,
  * maybe location-alias is older version's...
  *
+ * Same @ConfigurationProperties(prefix="person") and @ConfigurationProperties("person")
+ *
  * ref) https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html
  */
 @Component
-@ConfigurationProperties(prefix="person")
-public class PersonnelProperties {
+//@ConfigurationProperties(prefix="person")
+@ConfigurationProperties("person")
+public class PersonnelConfig {
 
     private String name;
 

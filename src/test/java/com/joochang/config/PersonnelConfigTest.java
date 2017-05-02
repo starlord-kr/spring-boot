@@ -8,13 +8,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PersonnelPropertiesTest {
+public class PersonnelConfigTest {
 
-    @Autowired PersonnelProperties personnelProperties;
+    @Autowired
+    PersonnelConfig personnelConfig;
 
     @Test public void getPropertyTest() {
 
-        String name = personnelProperties.getName();
+        String name = personnelConfig.getName();
         System.out.println("-- name=" + name);
 
     }
