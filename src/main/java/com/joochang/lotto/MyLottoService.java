@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyLottoService {
 
-    private PersonnelProperties personnelProperties;
+    private final PersonnelProperties personnelProperties;
 
-    @Autowired MyLottoService(PersonnelProperties personnelProperties) {
+    @Autowired public MyLottoService(PersonnelProperties personnelProperties) {
         this.personnelProperties = personnelProperties;
     }
 
     public String getPersonnelName() {
-        return this.getPersonnelName();
+        return personnelProperties.getName();
     }
 }

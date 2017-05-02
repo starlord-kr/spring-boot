@@ -15,6 +15,7 @@ public class MySpringBootApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) {
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println(this.myLottoService.toString());
 		System.out.println(this.myLottoService.getPersonnelName());
 //		if (args.length > 0 && args[0].equals("exitcode")) {
 //			throw new ExitException();
