@@ -2,10 +2,6 @@
 # spring.profiles.active=@activeProfile@
 
 spring:
-  profiles.active: local
-
----
-spring:
   profiles: local
 
 person.name: This is local

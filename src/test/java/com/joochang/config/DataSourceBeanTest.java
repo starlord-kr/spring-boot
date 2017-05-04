@@ -1,5 +1,6 @@
 package com.joochang.config;
 
+import org.apache.tomcat.jdbc.pool.PoolProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,18 @@ public class DataSourceBeanTest {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test public void getPoolProperties() {
+
+        PoolProperties poolProperties = dataSourceBean.getPoolProperties();
+
+        System.out.println("-- poolProperties=" + poolProperties.toString());
+        System.out.println("-- poolProperties.getUsername=" + poolProperties.getUsername());
+        System.out.println("-- poolProperties.getPassword=" + poolProperties.getPassword());
+        System.out.println("-- poolProperties.getValidationQueryTimeout=" + poolProperties.getValidationQueryTimeout());
+        System.out.println("-- poolProperties.getName=" + poolProperties.getName());
+        System.out.println("-- poolProperties.getPoolName=" + poolProperties.getPoolName());
     }
 
 }
