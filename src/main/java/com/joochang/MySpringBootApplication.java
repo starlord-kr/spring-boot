@@ -17,6 +17,7 @@ public class MySpringBootApplication implements CommandLineRunner{
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		System.out.println(this.myLottoService.toString());
 		System.out.println(this.myLottoService.getPersonnelName());
+		System.out.println("-- Min-Idle=" + this.myLottoService.getTomcatMinIdel());
 //		if (args.length > 0 && args[0].equals("exitcode")) {
 //			throw new ExitException();
 //		}

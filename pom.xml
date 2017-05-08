@@ -28,6 +28,7 @@
 		<profile>
 			<id>local</id>
 			<properties>
+				<activeProfile>local</activeProfile>
 				<environment>local</environment>
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
@@ -38,6 +39,7 @@
 		<profile>
 			<id>dev</id>
 			<properties>
+				<activeProfile>dev</activeProfile>
 				<environment>dev</environment>
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
@@ -45,6 +47,7 @@
 		<profile>
 			<id>qa</id>
 			<properties>
+				<activeProfile>qa</activeProfile>
 				<environment>qa</environment>
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
@@ -52,6 +55,7 @@
 		<profile>
 			<id>release</id>
 			<properties>
+				<activeProfile>release</activeProfile>
 				<environment>release</environment>
 				<maven.test.skip>true</maven.test.skip>
 			</properties>

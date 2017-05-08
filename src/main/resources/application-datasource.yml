@@ -37,10 +37,10 @@ spring:
     username: mytest
     password: mysql123!
     tomcat:
-      initial-size: 1
-      min-idle: 1
-      max-active: 4
-      max-idle: 4
+      initial-size: 2
+      min-idle: 2
+      max-active: 8
+      max-idle: 8
       max-wait: 3000
       validation-query: SELECT 1
       test-on-borrow: true
